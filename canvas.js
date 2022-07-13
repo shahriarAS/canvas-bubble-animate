@@ -76,9 +76,9 @@ function Circle(x, y, r, minR, dx, dy, strokeColor, fillColor) {
 }
 
 const allCircle = []
-for (let i = 0; i < 800; i++) {
-    dx = (Math.random() - 0.5) * 5
-    dy = (Math.random() - 0.5) * 5
+for (let i = 0; i < (window.innerWidth < 600 ? 400 : 800); i++) {
+    dx = (Math.random() - 0.5) * (window.innerWidth < 600 ? 2 : 5)
+    dy = (Math.random() - 0.5) * (window.innerWidth < 600 ? 2 : 5)
     r = Math.random() * 20 + 1
     minR = (Math.random() * 20 + 1)
     x = Math.random() * innerW
